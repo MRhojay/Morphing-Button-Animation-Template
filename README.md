@@ -15,7 +15,3 @@ Feel free to use, modify, and distribute this project for any purpose — **just
 - Fully responsive design
 - Clean and minimal code
 - Easy to customize
-
-## Live Preview
-
-(📌 Upload to GitHub Pages and paste link here after publishing)
