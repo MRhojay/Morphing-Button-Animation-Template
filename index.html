@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morphing Button</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>
+      <i class="fas fa-window-restore"></i>
+      Morphing Button
+    </h1>
+    
+    <div class="description">
+      <p>This features button transforms into a modal with a smooth morphing animation.</p>
+    </div>
+    
+    <button id="morphButton">
+      <div class="button-content">
+        <i class="fas fa-external-link-alt"></i>
+        Open Modal
+      </div>
+    </button>
+  </div>
+  
+  <div id="morphModal">
+    <button class="fixed-close-btn">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="modal-content">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h4>Mobile Friendly</h4>
+          <p>Optimized for all screen sizes</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h4>Performance</h4>
+          <p>Optimized for smooth animations</p>
+        </div>
+      </div>
+      
+      <div class="animation-description">
+        <h3>Morph Animation</h3>
+        <p>The morph animation transforms UI elements through smooth, organic transitions that maintain context and visual continuity. This technique creates a magical connection between different interface states by:</p>
+        
+        <ul>
+          <li>Gradually interpolating between starting and ending shapes</li>
+          <li>Maintaining element identity during transformation</li>
+          <li>Using bezier-curve easing for natural movement</li>
+          <li>Preserving user focus through visual storytelling</li>
+        </ul>
+        
+        <h4>How to Implement:</h4>
+        <ol>
+          <li><strong>Trigger Element:</strong> Design your button with clear visual hierarchy</li>
+          <li><strong>Target Element:</strong> Prepare the modal with consistent styling</li>
+          <li><strong>Animation Setup:</strong>
+            <pre><code>function createMorph(startEl, endEl) {
+  // Capture dimensions and position
+  const startRect = startEl.getBoundingClientRect();
+  const endRect = endEl.getBoundingClientRect();
+  
+  // Create morphing element
+  const morph = document.createElement('div');
+  document.body.appendChild(morph);
+  
+  // Animate properties
+  animate({
+    element: morph,
+    from: {
+      width: `${startRect.width}px`,
+      height: `${startRect.height}px`,
+      borderRadius: '50px',
+      top: `${startRect.top}px`,
+      left: `${startRect.left}px`
+    },
+    to: {
+      width: `${endRect.width}px`,
+      height: `${endRect.height}px`,
+      borderRadius: '20px',
+      top: `${endRect.top}px`,
+      left: `${endRect.left}px`
+    },
+    duration: 600,
+    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  });
+}</code></pre>
+          </li>
+          <li><strong>Timing:</strong> Use 500-700ms duration for optimal perception</li>
+          <li><strong>Performance:</strong> Utilize transform and opacity properties</li>
+        </ol>
+      </div>
+      
+      <div class="footer">
+        <p>Smooth Morphing Animation • Transform User Experiences</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="overlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>
