@@ -19,12 +19,3 @@ Feel free to use, modify, and distribute this project for any purpose — **just
 ## Live Preview
 
 (📌 Upload to GitHub Pages and paste link here after publishing)
-
-## 📂 File Structure
-/Morphing-Modal-Button
-│
-├── index.html
-├── style.css
-├── script.js
-├── LICENSE
-└── README.md
