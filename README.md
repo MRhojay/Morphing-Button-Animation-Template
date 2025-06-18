@@ -15,3 +15,7 @@ Feel free to use, modify, and distribute this project for any purpose — **just
 - Fully responsive design
 - Clean and minimal code
 - Easy to customize
+
+## Live Preview
+
+👉 [Click here to view live](https://mrhojay.github.io/Morphing-Button-Animation-Template/)
